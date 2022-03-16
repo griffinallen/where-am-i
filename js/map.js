@@ -79,6 +79,14 @@ function submitGuess(){
 
     L.marker(guessMarker.getLatLng()).addTo(locationMap);
 
+    var line = new L.Polyline([locationMarker.getLatLng(), guessMarker.getLatLng()], {
+        color: 'white',
+        weight: 3,
+        opacity: 0.5,
+        smoothFactor: 1
+    });
+    line.addTo(locationMap);
+
     var button = document.getElementById("mapSize")
     button.onclick = function(){window.location.reload();}
     button.textContent = distance.toFixed(3) + " km away --- The location was " + locations[randomIndex].Capital + ", " + locations[randomIndex].Country + " --- Click here to play again"
