@@ -1,0 +1,25 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.map {
+    width: 100%;
+}
+
+.big {
+    height: 70%;
+}
+
+.small {
+    height:27%;
+}
+
+#mapSize {
+    height: 3%;
+    width: 100%;
+}
