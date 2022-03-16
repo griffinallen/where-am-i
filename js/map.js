@@ -48,7 +48,12 @@ function submitGuess(){
     distance = distance * 111.111
     console.log(distance + "km")
 
-
+    Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+        maxZoom: 19,
+        minZoom: 1
+    });
+    Esri_WorldImagery.addTo(locationMap);
     
 
     var greenZone = L.circle(locationMarker.getLatLng(),{
